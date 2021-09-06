@@ -67,10 +67,16 @@ def data(request):
     employee= Employee.objects.all()
     student=Employee.objects.get(pk=2)
     student1=Employee.objects.get(pk=4)
-    context={
+    context1={
         'employee':employee,
         'student':student,
         'student1':student1,
     }
-    return  render(request,'data.html',context)
-
+    return  render(request,'data.html',context1)
+    
+def data2(request):
+    departments=Department.objects.all()
+    context2={
+        'departments':departments,
+    }
+    return  render(request,'data.html',context2)
