@@ -30,6 +30,38 @@
   </table>
 
 
+
+
+
+
+  <h1>Board of Directors details </h1>
+  <table style="width:100%">
+      <tr>
+        <th>bod_id</th>
+        <th>bod_name</th>
+        <th>bod_tagline</th>
+        <th>bod_quote</th>
+        <th>bod_pic</th>
+        <th>bod_qualification</th>
+        <th>bod_social</th>
+      </tr>
+      {% for director in directors %}
+      <tr>
+
+        <td>{{director.bod_id}}</td>
+        <td>{{director.bod_name}}</td>
+        <td>{{director.bod_tagline}}</td>
+        <td>{{director.bod_quote}}</td>
+        <td>{{director.bod_pic}}</td>
+        <td>{{director.bod_qualification}}</td>
+        <td>{{director.bod_social}}</td>
+        
+      </tr>
+      {% endfor %}
+    </table>
+  
+
+
   <h1>Department details </h1>
 <table style="width:100%">
     <tr>
