@@ -1,4 +1,4 @@
-{{student.emp_name}} and {{student1.emp_name}} made this database
+{{student.emp_name}} and {{student1.emp_name}} made this database very Organized.
 <h1>Employee details </h1>
 <table style="width:100%">
     <tr>
@@ -25,6 +25,27 @@
       <td>{{employees.salary}}</td>
       <td>{{employees.allowed_holidays}}</td>
       <td>{{employees.availed_holidays}}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+  <h1>Department details </h1>
+<table style="width:100%">
+    <tr>
+      <th>DEPARTMENT ID</th>
+      <th>DEPARTMENT Name</th>
+      <th>Number of Members</th>
+      <th>Projects Assigned</th>
+      <th>DEPARTMENT location</th>
+    </tr>
+    {% for departments in departments %}
+    <tr>
+      <td>{{departments.dept_id}}</td>
+      <td>{{departments.dept_name}}</td>
+      <td>{{departments.no_of_members}}</td>
+      <td>{{departments.project_assigned}}</td>
+      <td>{{departments.dept_location}}</td>
     </tr>
     {% endfor %}
   </table>
