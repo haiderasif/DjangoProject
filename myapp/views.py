@@ -72,18 +72,14 @@ def data(request):
         'student':student,
         'student1':student1,
     }
-    return  render(request,'data.html',context1)
-
-def data2(request):
     departments=Department.objects.all()
     context2={
         'departments':departments,
     }
-    return  render(request,'data.html',context2)
-
-def data3(request):
     directors=BoardOfDirector.objects.all()
     context3={
         'directors':directors,
     }
-    return  render(request,'data.html',context3)    
+
+    return  render(request,'data.html',context1,context2,context3)
+
