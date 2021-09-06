@@ -7,7 +7,11 @@ from .models import Booking
 from .models import Employee
 # Create your views here.
 def index(request):
-    return render(request,'index.html')
+    employee= Employee.objects.get(pk=2)
+    context={
+        'employee':employee,
+    }
+    return render(request,'index.html',context)
 def counter(request):
     text=request.POST['text']
     amount_of_words=len(text.split())
