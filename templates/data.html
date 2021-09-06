@@ -1,0 +1,32 @@
+{{student.emp_name}} and {{student1.emp_name}} made this database
+<h1>Employee details </h1>
+<table style="width:100%">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Designation</th>
+      <th>Seniority</th>
+      <th>Address</th>
+      <th>Joining</th>
+      <th>pay_scale</th>
+      <th>sal</th>
+      <th>Allowed_holidays</th>
+      <th>avb_holidays</th>
+    </tr>
+    {% for employees in employee %}
+    <tr>
+      <td>{{employees.emp_id}}</td>
+      <td>{{employees.emp_name}}</td>
+      <td>{{employees.address}}</td>
+      <td>{{employees.deignation}}</td>
+      <td>{{employees.seniority}}</td>
+      <td>{{employees.address}}</td>
+      <td>{{employees.joining_date}}</td>
+      <td>{{employees.pay_scale}}</td>
+      <td>{{employees.salary}}</td>
+      <td>{{employees.allowed_holidays}}</td>
+      <td>{{employees.availed_holidays}}</td>
+    </tr>
+    {% endfor %}
+  </table>
